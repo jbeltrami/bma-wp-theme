@@ -1,0 +1,53 @@
+.cta-row {
+  .cta-wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    .cta-img {
+      width: 60%;
+      height: auto;
+      display: block;
+      position: relative;
+
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .single-cta {
+      padding: 60px 15px;
+      position: absolute;
+      top: 50%;
+      width: 60%;
+      background-color: tint($cream, 70%);
+      transition: background-color 350ms ease;
+      cursor: pointer;
+      transform: translateY(-50%);
+      border-radius: 20px;
+
+      &:hover {
+        background-color: tint($cream, 50%);
+      }
+    }
+
+    &.odd {
+      .single-cta {
+        border: 10px solid $teal;
+        right: 15px;
+      }
+    }
+
+    &.even {
+      .single-cta {
+        border: 10px solid $dkPurple30;
+        left: 15px;
+        z-index: 3;
+      }
+    }
+  }
+}

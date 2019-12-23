@@ -1,0 +1,19 @@
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+$cream: #e9d891;
+$teal: #00a99d;
+$purple: #d6b9ce;
+$dkPurple30: shade($purple, 30%);
+$dkPurple40: shade($purple, 40%);
+$dkPurple50: shade($purple, 50%);
+$white: #fff;
+$black: #000;
+
+$serif: "Libre Baskerville", serif;
+$sans: "Raleway", sans-serif;

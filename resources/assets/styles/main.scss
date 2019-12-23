@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
+@import "./vars";
+@import "./global";
+
+// Modules
+@import "./modules/navbar";
+@import "./modules/landing";
+@import "./modules/footer";
+@import "./modules/cta-row";
+@import "./modules/intro";

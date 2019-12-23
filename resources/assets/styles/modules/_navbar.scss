@@ -1,0 +1,21 @@
+.navbar {
+  border-bottom: 2px solid $dkPurple30;
+
+  .logo {
+    width: 75px;
+    height: auto;
+    display: block;
+  }
+
+  .nav-items {
+    display: flex;
+
+    .nav-item {
+      margin: 0 15px;
+
+      a {
+        color: $dkPurple30;
+      }
+    }
+  }
+}

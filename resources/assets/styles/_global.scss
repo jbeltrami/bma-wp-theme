@@ -1,0 +1,47 @@
+body {
+  background-color: tint($cream, 70%);
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cta {
+  padding: 15px;
+  min-width: 200px;
+  margin: 40px auto 0;
+  display: block;
+  background-color: $teal;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 350ms ease;
+
+  &:hover {
+    background-color: $cream;
+
+    a {
+      color: $dkPurple30;
+    }
+  }
+
+  a {
+    color: $white;
+    font-size: 1.25rem;
+  }
+}
+
+section {
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+
+.serif {
+  font-family: $serif;
+}
+
+p {
+  font-family: $sans;
+}
