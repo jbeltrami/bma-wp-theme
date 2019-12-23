@@ -3,31 +3,14 @@
 
 	<h1>Boston Massage Associates</h1>
 
-	<ul class="nav-items ml-auto">
-		<li class="nav-item">
-			<a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">
-				Services
-			</a>
-		</li>
-		<li class="nav-item">
-			<a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">
-				Rates
-			</a>
-		</li>
-		<li class="nav-item">
-			<a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">
-				About
-			</a>
-		</li>
-		<li class="nav-item">
-			<a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">
-				Reviews
-			</a>
-		</li>
-		<li class="nav-item">
-			<a href="javascript:void(0)" target="_blank" rel="noopener noreferrer">
-				Contact
-			</a>
-		</li>
-	</ul>
+	{% if menu %}
+		<ul class="nav-items ml-auto">
+			{% for item in menu.items %}
+				<li class="nav-item">
+					<a target="{{item.target}}" rel="noopener noreferrer" href="{{ item.link }}">{{ item.title }}</a>
+					{% include "menu.twig" with {'items': item.children} %}
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
 </nav>
