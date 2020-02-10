@@ -1,7 +1,36 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	{% include "partial/landing.twig" %}
-	{% include "partial/homepage/intro.twig" %}
-	{% include "partial/cta-row.twig" %}
+
+	{% if post.meta('modules') %}
+		{% for item in post.meta('modules') %}
+
+			{% if item.services %}
+				{% include "templates/modules/services.twig" with {
+					services: item.services
+				} %}
+			{% endif %}
+
+			{% if item.about_section %}
+				<p>About Section
+				</p>
+			{% endif %}
+
+			{% if item.rates %}
+				<p>Rates
+				</p>
+			{% endif %}
+
+			{% if item.testimonials %}
+				<p>Testimonials
+				</p>
+			{% endif %}
+
+			{% if item.richtext %}
+				<p>Richtext
+				</p>
+			{% endif %}
+
+		{% endfor %}
+	{% endif %}
 {% endblock %}

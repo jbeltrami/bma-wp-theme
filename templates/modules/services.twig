@@ -1,0 +1,12 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			{% for service in services %}
+				<div>
+					<h4>{{service.service_title}}</h4>
+					<p>{{service.service_description}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
