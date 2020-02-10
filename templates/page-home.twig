@@ -6,9 +6,11 @@
 		{% for item in post.meta('modules') %}
 
 			{% if item.services %}
-				{% include "templates/modules/services.twig" with {
-					services: item.services
-				} %}
+				{% include "templates/modules/services.twig" with
+					{
+						services: item.services
+					}
+				%}
 			{% endif %}
 
 			{% if item.about_section %}
@@ -27,8 +29,11 @@
 			{% endif %}
 
 			{% if item.richtext %}
-				<p>Richtext
-				</p>
+				{% include "templates/modules/richtext.twig" with
+					{
+						content: item.richtext
+					}
+				%}
 			{% endif %}
 
 		{% endfor %}
