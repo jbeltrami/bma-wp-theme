@@ -13,9 +13,13 @@
 				%}
 			{% endif %}
 
-			{% if item.about_section %}
-				<p>About Section
-				</p>
+			{% if item.about_language %}
+				{% include "templates/modules/about.twig" with
+					{
+						copy: item.about_language,
+						thumbs: item.thumbnail_description
+					}
+				%}
 			{% endif %}
 
 			{% if item.rates %}
