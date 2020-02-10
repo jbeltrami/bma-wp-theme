@@ -23,8 +23,11 @@
 			{% endif %}
 
 			{% if item.rates %}
-				<p>Rates
-				</p>
+				{% include "templates/modules/rates.twig" with
+					{
+						rates: item.rates
+					}
+				%}
 			{% endif %}
 
 			{% if item.testimonials %}
