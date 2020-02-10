@@ -1,0 +1,35 @@
+{% if loop.index is odd %}
+	<div class="row cta-wrapper odd">
+		<div class="col-lg-10">
+			<div class="cta-img">
+				<img class="img-fluid" src="{{cta.image.url}}" alt="{{cta.image.alt}}"/>
+			</div>
+			<div class="single-cta">
+				<a href="{{cta.link.url}}" target="{{cta.link.target}}">
+					<h4 class="text-center serif">{{cta.title}}</h4>
+					{{cta.copy}}
+				</a>
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{% if loop.index is even %}
+
+
+	<div class="row cta-wrapper even">
+		<div class="col-lg-10 offset-lg-2">
+			<div class="single-cta">
+				<a href="{{cta.link.url}}" target="{{cta.link.target}}">
+					<h4 class="text-center serif">{{cta.title}}</h4>
+					{{cta.copy}}
+				</a>
+			</div>
+
+			<div class="cta-img ml-auto">
+				<img class="img-fluid" src="{{cta.image.url}}" alt="{{cta.image.alt}}"/>
+			</div>
+		</div>
+	</div>
+
+{% endif %}

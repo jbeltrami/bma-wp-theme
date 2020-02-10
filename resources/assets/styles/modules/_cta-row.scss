@@ -1,7 +1,7 @@
 .cta-row {
   .cta-wrapper {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 160px;
+    margin-bottom: 160px;
     .cta-img {
       width: 60%;
       height: auto;
@@ -20,7 +20,7 @@
     }
 
     .single-cta {
-      padding: 60px 15px;
+      padding: 30px 15px;
       position: absolute;
       top: 50%;
       width: 60%;
@@ -30,9 +30,22 @@
       transform: translateY(-50%);
       border-radius: 20px;
 
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      p {
+        text-align: center;
+      }
+
       &:hover {
         background-color: tint($cream, 50%);
       }
+
+      // @media (min-width: 768px) {
+      //   padding: 60px 15px;
+      // }
     }
 
     &.odd {
@@ -48,6 +61,11 @@
         left: 15px;
         z-index: 3;
       }
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 80px;
+      margin-bottom: 80px;
     }
   }
 }

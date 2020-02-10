@@ -2,5 +2,11 @@
 
 {% block content %}
 	{% include "partial/intro.twig" %}
-	{% include "partial/cta-row.twig" %}
+	{% if post.meta('modules') %}
+		{% for item in post.meta('modules') %}
+			{% if item.cta_block %}
+				{% include "partial/cta-row.twig" %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
 {% endblock %}
