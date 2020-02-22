@@ -7,7 +7,7 @@
 }
 
 $cream: #e9d891;
-$teal: #00a99d;
+$teal: rgba(22, 170, 157, 1.0);
 $purple: #d6b9ce;
 $dkPurple30: shade($purple, 30%);
 $dkPurple40: shade($purple, 40%);
@@ -15,5 +15,7 @@ $dkPurple50: shade($purple, 50%);
 $white: #fff;
 $black: #000;
 
-$serif: "Libre Baskerville", serif;
-$sans: "Raleway", sans-serif;
+$serif: 'Gabriela',
+serif;
+$sans: 'Didact Gothic',
+sans-serif;

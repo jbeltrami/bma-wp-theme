@@ -1,0 +1,13 @@
+.richtext,
+.section-about {
+  p {
+    width: 100%;
+    color: $white;
+
+    img {
+      display: block;
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+}

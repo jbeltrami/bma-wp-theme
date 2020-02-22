@@ -4,6 +4,6 @@
  * Our JS manifest used to import custom components from src/js/custom
  *
  */
-import helloWorld from './custom/test';
+import toggleClassesOnCollapse from './custom/test';
 
-helloWorld();
+toggleClassesOnCollapse();

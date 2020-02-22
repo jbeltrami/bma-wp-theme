@@ -1,20 +1,26 @@
 {% if not item.thumbnail_description %}
-	<div class="container">
+	<section class="container section-about">
+		<div class="row">
+			<h2>Learn About BMA</h2>
+		</div>
 		<div class="row">
 			<div class="col-lg-12">
 				<h4>{{copy}}</h4>
 			</div>
 		</div>
-	</div>
+	</section>
 
 {% else %}
-	<div class="container">
+	<section class="container section-about">
 		<div class="row">
-			<div class="col-lg-10">
+			<h2>Learn About BMA</h2>
+		</div>
+		<div class="row">
+			<div class="col-lg-8">
 				<h4>{{copy}}</h4>
 			</div>
 
-			<div class="col-lg-2">
+			<div class="col-lg-4">
 				{% for thumb in item.thumbnail_description %}
 					<figure>
 						<img class="img-fluid" src="{{Image(thumb.thumbnail)}}" alt="{{thumb.thumbnail.alt}}">
@@ -23,5 +29,5 @@
 				{% endfor %}
 			</div>
 		</div>
-	</div>
+	</section>
 {% endif %}

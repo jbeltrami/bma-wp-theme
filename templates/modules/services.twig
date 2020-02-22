@@ -1,12 +1,19 @@
-<div class="container">
+<div class="container accordion" id="services-acc">
 	<div class="row">
 		<div class="col-lg-12">
-			{% for service in services %}
-				<div>
-					<h4>{{service.service_title}}</h4>
-					<p>{{service.service_description}}</p>
-				</div>
-			{% endfor %}
+			<div class="services">
+				{% for service in services %}
+					<div class="service">
+						<button class="services-trigger" type="button" data-toggle="collapse" data-target="#collapse{{loop.index0}}" aria-expanded="true" aria-controls="collapse{{loop.index0}}">
+							{{service.service_title}}
+						</button>
+
+						<div id="collapse{{loop.index0}}" class="services-body collapse" aria-labelledby="heading{{loop.index0}}" data-parent="#services-acc">
+							<p>{{service.service_description}}</p>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
 		</div>
 	</div>
 </div>

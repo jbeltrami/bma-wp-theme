@@ -3,3 +3,6 @@ wp-content
 composer.lock
 node_modules
 resources/.cache-loader
+resources/assets/.DS_Store
+resources/.DS_Store
+.DS_Store

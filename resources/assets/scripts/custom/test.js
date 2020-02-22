@@ -1,5 +1,7 @@
-const helloWorld = () => {
-  console.log('Hello World');
+const toggleClassesOnCollapse = () => {
+  $('#services-acc').on('show.bs.collapse', e => {
+    $(e.target).toggleClass('open');
+  });
 };
 
-export default helloWorld;
+export default toggleClassesOnCollapse;

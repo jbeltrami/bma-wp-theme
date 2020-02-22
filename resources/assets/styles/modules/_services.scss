@@ -1,0 +1,30 @@
+.services {
+  margin-top: 50px;
+
+  .service {
+    button {
+      width: 100%;
+      text-align: left;
+      font-family: $serif;
+      font-size: 40px;
+      margin-top: 5px;
+      padding-left: 45px;
+      color: $white;
+      border: 0;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(13, 121, 111, 1.0);
+        outline: 0;
+      }
+    }
+
+    .services-body {
+      background-color: rgba(13, 121, 111, 1.0);
+      color: $white;
+      padding: 45px;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
