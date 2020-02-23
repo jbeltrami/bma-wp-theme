@@ -14,11 +14,16 @@
       font-size: 32px;
       color: $black;
       margin-bottom: 0;
-
     }
 
     @media (min-width: 768px) {
       max-width: 70%;
     }
+  }
+
+  .btn-default {
+    position: absolute;
+    top: 70vh;
+    left: 10vw;
   }
 }
