@@ -1,0 +1,44 @@
+.contact-form {
+  margin-top: 50px;
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+
+    .form-pair {
+
+      &:first-of-type {
+        input {
+          margin-right: 15px;
+        }
+      }
+
+      &:not(:first-of-type) {
+        input {
+          margin-left: 15px;
+        }
+      }
+
+    }
+  }
+
+  .form-pair {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 15px;
+
+    input,
+    textarea {
+      background-color: $formgreen;
+      border: 0;
+      color: $black;
+      padding: 5px;
+    }
+
+    label {
+      color: $white;
+      font-size: 22px;
+    }
+  }
+}

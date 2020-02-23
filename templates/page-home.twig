@@ -6,7 +6,7 @@
 
 		<div class="main-msg">{{post.content}}</div>
 
-		<button class="btn-default">Book a Session</button>
+		<a class="btn-default" href="https://www.schedulicity.com/scheduling/BMAR86" target="_blank">Book a Session</a>
 	</section>
 
 	{% if post.meta('modules') %}
@@ -52,4 +52,5 @@
 
 		{% endfor %}
 	{% endif %}
+	{% include "templates/modules/contact.twig" %}
 {% endblock %}
