@@ -38,8 +38,11 @@
 			{% endif %}
 
 			{% if item.testimonials %}
-				<p>Testimonials
-				</p>
+				{% include "templates/modules/testimonials.twig" with
+					{
+						testimonials: item.testimonials
+					}
+				%}
 			{% endif %}
 
 			{% if item.richtext %}

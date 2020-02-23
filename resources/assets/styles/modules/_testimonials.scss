@@ -1,0 +1,28 @@
+.testimonials {
+  .testimonial-wrapper {
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .testimonial-text {
+    text-align: center;
+  }
+
+
+  .testimonial-author {
+    position: relative;
+    text-align: right;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+
+    .dash {
+      width: 15px;
+      background-color: $white;
+      height: 2px;
+      margin-left: auto;
+      margin-right: 10px;
+    }
+  }
+}
