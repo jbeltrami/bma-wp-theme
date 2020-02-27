@@ -23,7 +23,11 @@
 
   .btn-default {
     position: absolute;
-    top: 80vh;
+    top: 50vw;
     left: 10vw;
+
+    @media (min-width: 1920px) {
+      top: 70vh;
+    }
   }
 }

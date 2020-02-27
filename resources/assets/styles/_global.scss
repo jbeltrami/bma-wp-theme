@@ -9,11 +9,12 @@ body {
 
 p {
   font-size: 24px;
-  color: $white;
+  color: $black;
 }
 
 figcaption {
-  color: $white;
+  color: $black;
+  margin-top: 10px;
 }
 
 h1,
@@ -66,7 +67,7 @@ section {
 .btn-default {
   padding: 15px 30px;
   background-color: $mdgreen;
+  border: 3px solid $purple;
   color: $white;
-  border: 0;
   font-size: 26px;
 }
