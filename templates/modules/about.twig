@@ -1,38 +1,41 @@
 {% if not item.thumbnail_description %}
-	<section class="container section-about">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2>Learn About BMA</h2>
-			</div>
-
-		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<h4>{{copy}}</h4>
-			</div>
-		</div>
-	</section>
+<section class="container section-about" id="about">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Learn About BMA</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <h4>{{ copy }}</h4>
+    </div>
+  </div>
+</section>
 
 {% else %}
-	<section class="container section-about">
-		<div class="row">
-			<div class="col-lg-12">
-				<h2>Learn About BMA</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-8">
-				<h4>{{copy}}</h4>
-			</div>
+<section class="container section-about" id="about">
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>Learn About BMA</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8">
+      <h4>{{ copy }}</h4>
+    </div>
 
-			<div class="col-lg-4">
-				{% for thumb in item.thumbnail_description %}
-					<figure>
-						<img class="img-fluid" src="{{Image(thumb.thumbnail)}}" alt="{{thumb.thumbnail.alt}}">
-						<figcaption>{{thumb.description}}</figcaption>
-					</figure>
-				{% endfor %}
-			</div>
-		</div>
-	</section>
+    <div class="col-lg-4">
+      {% for thumb in item.thumbnail_description %}
+      <figure>
+        <img
+          class="img-fluid"
+          src="{{ Image(thumb.thumbnail) }}"
+          alt="{{ thumb.thumbnail.alt }}"
+        />
+        <figcaption>{{ thumb.description }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endif %}

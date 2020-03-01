@@ -7,10 +7,10 @@
 }
 
 $cream: #e9d891;
-$teal: rgba(22, 170, 157, 1.0);
-$ltgreen: rgba(22, 170, 157, 0.30);
-$mdgreen: rgba(22, 170, 157, 0.50);
-$formgreen: rgba(232, 217, 145, 0.30);
+$teal: rgba(22, 170, 157, 1);
+$ltgreen: rgba(22, 170, 157, 0.3);
+$mdgreen: rgba(22, 170, 157, 0.5);
+$formgreen: rgba(232, 217, 145, 0.3);
 $purple: rgba(214, 185, 206, 1);
 $ltpurple: rgba(214, 185, 206, 0.4);
 $dkPurple30: shade($purple, 30%);
@@ -19,7 +19,7 @@ $dkPurple50: shade($purple, 50%);
 $white: #fff;
 $black: #000;
 
-$serif: 'Gabriela',
-serif;
-$sans: 'Didact Gothic',
-sans-serif;
+$serif: "Gabriela", serif;
+$sans: "Didact Gothic", sans-serif;
+
+$bkpoint: 991px;

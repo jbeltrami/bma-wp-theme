@@ -9,7 +9,6 @@
     text-align: center;
   }
 
-
   .testimonial-author {
     position: relative;
     text-align: right;
@@ -24,5 +23,15 @@
       margin-left: auto;
       margin-right: 10px;
     }
+  }
+
+  .carousel-control-prev {
+    left: -20%;
+    color: $black;
+  }
+
+  .carousel-control-next {
+    right: -20%;
+    color: $black;
   }
 }
