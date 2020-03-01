@@ -1,15 +1,29 @@
-<img class="logo" src="{{theme.path}}/resources/assets/images/bma.svg" alt=""/>
+<div class="hamburger">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+</div>
 
-<nav class="navbar">
+<img
+  class="logo"
+  src="{{ theme.path }}/resources/assets/images/bma.svg"
+  alt=""
+/>
 
-	{% if menu %}
-		<ul class="nav-items ml-auto">
-			{% for item in menu.items %}
-				<li class="nav-item">
-					<a target="{{item.target}}" rel="noopener noreferrer" href="{{ item.link }}">{{ item.title }}</a>
-					{% include "menu.twig" with {'items': item.children} %}
-				</li>
-			{% endfor %}
-		</ul>
-	{% endif %}
+<nav class="navbar align-items-center">
+  {% if menu %}
+  <ul class="nav-items">
+    {% for item in menu.items %}
+    <li class="nav-item">
+      <a
+        target="{{ item.target }}"
+        rel="noopener noreferrer"
+        href="{{ item.link }}"
+        >{{ item.title }}</a
+      >
+      {# {% include "menu.twig" with {'items': item.children} %} #}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 </nav>

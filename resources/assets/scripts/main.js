@@ -6,5 +6,6 @@
  */
 import toggleClassesOnCollapse from "./custom/test";
 import "./custom/smoothScroll";
+import "./custom/hamburger";
 
 toggleClassesOnCollapse();
