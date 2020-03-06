@@ -42,6 +42,7 @@
 			{% if item.rates %}
 				{% include "templates/modules/rates.twig" with
 					{
+						copy: item.paragraph_optional,
 						rates: item.rates
 					}
 				%}

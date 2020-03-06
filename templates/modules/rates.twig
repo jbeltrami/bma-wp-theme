@@ -1,18 +1,37 @@
 <section class="rates" id="rates">
+  {% if copy %}
+    {% include "templates/modules/richtext.twig" with {
+      content: copy,
+      margin: '50px'
+
+    } %}
+  {% endif %}
+
   <div class="container">
-    <div class="row align-items-center justify-content-center">
-      <div class="col-lg-12">
-        <table class="table">
-          <tbody>
-            {% for rate in rates %}
-            <tr>
-              <th scope="row">
-                <p class="duration">{{ rate.duration }}</p>
-              </th>
-              <td>
-                <p class="rate">{{ rate.rate }}</p>
-              </td>
+    <div class="row align-items-center justify-content-start">
+      <div class="col-lg-8">
+        <table class="table table-striped">
+          <thead>
+            <tr class="service-title">
+              <th>{{rates.service}}</th>
+              <th></th>
             </tr>
+            <tr class="service-description">
+              <th>{{rates.description}}</th>
+              <th></th>
+            </tr>
+
+          </thead>
+          <tbody>
+            {% for rate in rates.service_rates %}
+              <tr>
+                <th scope="row">
+                  <p class="duration">{{ rate.duration }}</p>
+                </th>
+                <td>
+                  <p class="rate">{{ rate.price }}</p>
+                </td>
+              </tr>
             {% endfor %}
           </tbody>
         </table>

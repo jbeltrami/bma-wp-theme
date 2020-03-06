@@ -11,11 +11,11 @@
     z-index: 1;
     overflow: hidden;
   }
+
   .main-msg {
-    position: absolute;
+    position: relative;
     background-color: $mdgreen;
-    top: 25%;
-    right: 50px;
+
     z-index: 3;
     padding: 30px;
     text-align: right;
@@ -29,7 +29,10 @@
     }
 
     @media (min-width: 768px) {
+      position: absolute;
       max-width: 70%;
+      top: 25%;
+      right: 50px;
     }
   }
 
