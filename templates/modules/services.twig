@@ -1,11 +1,14 @@
-{% if copy %}
+<section class="accordion" id="services-acc">
+
+	{% if copy %}
 	{% include "templates/modules/richtext.twig" with {
 		content: copy,
 		margin: '50px'
 	} %}
 {% endif %}
 
-<div class="container accordion" id="services-acc">
+	<div class="container">
+
 	<div class="row">
 		<div class="col-lg-10">
 			<div class="services">
@@ -23,4 +26,5 @@
 			</div>
 		</div>
 	</div>
-</div>
+	</div>
+</section>

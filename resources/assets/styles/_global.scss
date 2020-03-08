@@ -60,3 +60,13 @@ section {
 .content-wrapper {
   margin-top: 0;
 }
+
+* {
+  &:focus {
+    outline-color: $black
+  }
+
+  &:empty {
+    display: none;
+  }
+}
