@@ -6,9 +6,10 @@
       width: 100%;
       text-align: left;
       font-family: $serif;
-      font-size: 40px;
-      margin-top: 5px;
-      padding-left: 45px;
+      font-size: 28px;
+      margin-top: 15px;
+      padding: 5px;
+      padding-left: 15px;
       color: $white;
       border: 0;
 
@@ -16,13 +17,19 @@
 
       &:hover,
       &:focus {
-        background-color: rgba(13, 121, 111, 1.0);
+        background-color: rgba(13, 121, 111, 1);
         outline: 0;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 40px;
+        padding-left: 45px;
+        margin-top: 5px;
       }
     }
 
     .services-body {
-      background-color: rgba(13, 121, 111, 1.0);
+      background-color: rgba(13, 121, 111, 1);
       color: $white;
       padding: 45px;
       padding-bottom: 15px;

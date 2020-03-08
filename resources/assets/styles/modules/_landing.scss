@@ -13,12 +13,13 @@
   }
 
   .main-msg {
-    position: relative;
     background-color: $mdgreen;
-
     z-index: 3;
     padding: 30px;
     text-align: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
     h1,
     p {
@@ -38,12 +39,19 @@
 
   .btn-default {
     position: absolute;
-    top: 50vw;
-    left: 10vw;
+    top: 90vh;
+    left: 0;
     z-index: 3;
 
     @media (min-width: 1920px) {
       top: 70vh;
     }
+  }
+
+  .image-wrapper {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 }

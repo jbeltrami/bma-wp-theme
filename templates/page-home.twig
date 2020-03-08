@@ -2,8 +2,8 @@
 
 {% block content %}
 	<section class="intro m-0 p-0" id="intro">
-		<div class="image-wrapper">
-		<img class="img-fluid" src="{{post.thumbnail.src}}" alt="Welcome to Boston Massage Associates">
+		<div class="image-wrapper" style="background-image: url('{{post.thumbnail.src}}')">
+		{# <img class="img-fluid" src="{{post.thumbnail.src}}" alt="Welcome to Boston Massage Associates"> #}
 	</div>
 
 		<div class="main-msg">{{post.content}}</div>
