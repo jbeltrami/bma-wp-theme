@@ -25,6 +25,7 @@
 			{% if item.services %}
 				{% include "templates/modules/services.twig" with
 					{
+						copy: item.paragraph_optional,
 						services: item.services
 					}
 				%}

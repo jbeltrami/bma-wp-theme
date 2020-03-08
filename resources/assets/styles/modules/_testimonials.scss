@@ -25,13 +25,18 @@
     }
   }
 
-  .carousel-control-prev {
-    left: -20%;
-    color: $black;
+  .carousel-inner {
+    width: 80%;
+    margin: 0 auto;
   }
 
-  .carousel-control-next {
-    right: -20%;
-    color: $black;
-  }
+  // .carousel-control-prev {
+  //   left: -20%;
+  //   color: $black;
+  // }
+
+  // .carousel-control-next {
+  //   right: -20%;
+  //   color: $black;
+  // }
 }
