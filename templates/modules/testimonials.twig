@@ -11,16 +11,18 @@
       <div
         id="carouselExampleControls"
         class="carousel slide"
-        data-ride="carousel"
+        data-ride="false"
       >
         <div class="carousel-inner">
           {% for item in testimonials %}
           <div class="carousel-item{% if loop.first %} active{% endif %}">
-            <div class="testimonial-text">{{ item.testimonial }}</div>
-            <p class="testimonial-author">
-              <span class="dash"></span>
-              <span>{{ item.author }}</span>
-            </p>
+            <div class="carousel-positioner">
+              <div class="testimonial-text">{{ item.testimonial }}</div>
+              <p class="testimonial-author">
+                <span class="dash"></span>
+                <span>{{ item.author }}</span>
+              </p>
+            </div>
           </div>
           {% endfor %}
         </div>
