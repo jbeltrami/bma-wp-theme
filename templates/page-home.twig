@@ -2,7 +2,7 @@
 
 {% block content %}
 	<section class="intro m-0 p-0" id="intro">
-		<div class="image-wrapper" style="background-image: url('{{post.thumbnail.src}}')">
+		<div class="image-wrapper" style="background-image: url('{{post.thumbnail.src}}'); background-position: center center;">
 		{# <img class="img-fluid" src="{{post.thumbnail.src}}" alt="Welcome to Boston Massage Associates"> #}
 	</div>
 
@@ -25,6 +25,7 @@
 			{% if item.services %}
 				{% include "templates/modules/services.twig" with
 					{
+						index: loop.index0,
 						copy: item.paragraph_optional,
 						services: item.services
 					}
@@ -67,5 +68,5 @@
 
 		{% endfor %}
 	{% endif %}
-	{% include "templates/modules/contact.twig" %}
+	{# {% include "templates/modules/contact.twig" %} #}
 {% endblock %}

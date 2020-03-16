@@ -1,5 +1,5 @@
 <section class="accordion" id="services-acc">
-
+<div id="acc-{{index}}">
 	{% if copy %}
 	{% include "templates/modules/richtext.twig" with {
 		content: copy,
@@ -14,17 +14,18 @@
 			<div class="services">
 				{% for service in services %}
 					<div class="service">
-						<button class="services-trigger" type="button" data-toggle="collapse" data-target="#collapse{{loop.index0}}" aria-expanded="true" aria-controls="collapse{{loop.index0}}">
+						<button class="services-trigger" type="button" data-toggle="collapse" data-target="#collapse-acc{{index}}-{{loop.index0}}" aria-expanded="true" aria-controls="collapse-acc{{index}}-{{loop.index0}}">
 							{{service.service_title}}
 						</button>
 
-						<div id="collapse{{loop.index0}}" class="services-body collapse" aria-labelledby="heading{{loop.index0}}" data-parent="#services-acc">
+						<div id="collapse-acc{{index}}-{{loop.index0}}" class="services-body collapse" aria-labelledby="heading{{loop.index0}}" data-parent="#acc-{{index}}">
 							<p>{{service.service_description}}</p>
 						</div>
 					</div>
 				{% endfor %}
 			</div>
 		</div>
+	</div>
 	</div>
 	</div>
 </section>
