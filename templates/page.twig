@@ -1,11 +1,32 @@
 {% extends "base.twig" %}
-
 {% block content %}
-	{% include "partial/intro.twig" %}
+	<section class="intro m-0 p-0" id="intro">
+		<div class="image-wrapper" style="background-image: url('{{ post.thumbnail.src }}'); background-position: center center;"></div>
+
+		<div class="main-msg">
+			{{ post.content }}
+		</div>
+	</section>
+
 	{% if post.meta('modules') %}
 		{% for item in post.meta('modules') %}
-			{% if item.cta_block %}
-				{% include "partial/cta-row.twig" %}
+			{% if item.images %}
+				{% include "templates/modules/image-slider.twig" with { images: item.images } %}
+			{% endif %}
+			{% if item.services %}
+				{% include "templates/modules/services.twig" with { index: loop.index0, copy: item.paragraph_optional, services: item.services } %}
+			{% endif %}
+			{% if item.about_language %}
+				{% include "templates/modules/about.twig" with { copy: item.about_language, thumbs: item.thumbnail_description } %}
+			{% endif %}
+			{% if item.rates %}
+				{% include "templates/modules/rates.twig" with { copy: item.paragraph_optional, rates: item.rates } %}
+			{% endif %}
+			{% if item.testimonials %}
+				{% include "templates/modules/testimonials.twig" with { testimonials: item.testimonials } %}
+			{% endif %}
+			{% if item.richtext %}
+				{% include "templates/modules/richtext.twig" with { content: item.richtext } %}
 			{% endif %}
 		{% endfor %}
 	{% endif %}
